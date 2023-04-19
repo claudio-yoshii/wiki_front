@@ -1,7 +1,7 @@
 <template>
   <div>
-    <b-row style="height:100vh">
-      <b-col md="3" style="height:100vh">
+    <b-row style="height: 100vh">
+      <b-col md="3" style="height: 100vh">
         <b-card
           header="Lista de veiculos"
           border-variant="primary"
@@ -14,7 +14,7 @@
               {{ pegar_veiculo(data) }}
             </template>
           </b-table>
-        </b-card>
+        </b-card>       
       </b-col>
       <b-col>
         <Gmap />
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import _ from "lodash";
 export default {
   data() {
     return {
@@ -67,9 +68,9 @@ export default {
       vuex: "veiculos/veiculos",
     });
   },
-  components:{
-    Gmap:()=> import('./components/Gmap.vue')
-  }
+  components: {
+    Gmap: () => import("./components/Gmap.vue"),
+  },
 };
 </script>
 
